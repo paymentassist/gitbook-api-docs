@@ -1,7 +1,7 @@
 # /begin
 
 {% hint style="danger" %}
-IMPORTANT: commencing **March 1st 2020**, the following _optional_  fields will become _required_ for this endpoint: `f_name`, `s_name`, `addr1` and `postcode`.
+IMPORTANT: commencing **March 1st 2020**, the following _optional_ fields will become _required_ for this endpoint: `f_name`, `s_name`, `addr1` and `postcode`.
 {% endhint %}
 
 {% api-method method="post" host="https://api.v1.payment-assist.co.uk" path="/begin" %}
@@ -10,17 +10,7 @@ Begin application
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint commences the application process. A successful request will return a `token` \(a 36-char UUID\) along with a continuation URL. You should redirect the customer to this URL so they can complete the rest of the signup process and record the `token` for later use. If configured, we'll send them back to either your `success_url` or `failure_url`, depending on the outcome.  
-  
-Before we redirect the customer back to the client site, we will append the success/failure URL with the following GET parameters:  
-  
-| name | type | description |
-| :--- | :--- | :--- |
-| `token` | string | The application token (UUID). |
-| `status` | string | Either `success` or `failed`. |
-| `signature` | string | The [authentication signature](authentication.md) of the request, generated using your account credentials. |
-  
-  
+This endpoint commences the application process. A successful request will return a `token` \(a 36-char UUID\) along with a continuation URL. You should redirect the customer to this URL so they can complete the rest of the signup process and record the `token` for later use.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -71,11 +61,11 @@ URL redirect destination on success
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="webhook\_url" type="string" required=false %}
-Your webhook URL \(see [Webhooks](../webhooks.md)\)
+Your webhook URL \(see Webhooks\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="plan\_id" type="integer" required=false %}
-The plan ID \(See [Plan Types](../plan-types.md)\). \* **Required where account has access to multiple plan types** \*
+The plan ID \(See Plan Types\). \* **Required where account has access to multiple plan types** \*
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="reg\_no" type="string" required=false %}
@@ -110,14 +100,13 @@ Customer county/state
 Customer mobile telephone number
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="send_email" type="boolean" required=false %}
+{% api-method-parameter name="send\_email" type="boolean" required=false %}
 Send application link to customer via email
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="send_sms" type="boolean" required=false %}
+{% api-method-parameter name="send\_sms" type="boolean" required=false %}
 Send application link to customer via SMS
 {% endapi-method-parameter %}
-
 {% endapi-method-form-data-parameters %}
 {% endapi-method-request %}
 
@@ -142,7 +131,13 @@ Application successful
 {% endapi-method-spec %}
 {% endapi-method %}
 
-**Offline Sessions** - where the customer is not in an active browser session, we support two further optional boolean parameters: `send_sms` and `send_email`. These will trigger a notification to be sent via email/SMS to the customer's device with a link to complete the remainder of the sign-up process.
+If configured, we'll send the user back to either your `success_url` or `failure_url`, depending on the outcome. Before we redirect the customer, we will append the success/failure URL with the following GET parameters:
+
+| name | type | description |
+| :--- | :--- | :--- |
+| `token` | string | The application token \(uuid\). |
+| `status` | string | Either `success` or `failed`. |
+| `signature` | string | The [authentication signature](../authentication.md) of the request, generated using your account credentials. |
 
 {% hint style="info" %}
 For possible error responses, see [Glossary: Status Codes](../glossary.md#status-codes)
