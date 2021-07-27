@@ -1,0 +1,20 @@
+# Table of contents
+
+* [Overview](README.md)
+* [API Methods](methods/README.md)
+  * [/account](methods/account.md)
+  * [/preapproval](methods/preapproval.md)
+  * [/begin](methods/begin.md)
+  * [/status](methods/status.md)
+  * [/update](methods/update.md)
+  * [/invoice](methods/invoice.md)
+  * [/plan](methods/plan.md)
+* [Authentication](authentication.md)
+* [Webhooks](webhooks.md)
+* [Plan Types](plan-types.md)
+* [Test Environment](test-environment.md)
+* [Official SDKs](official-sdks/README.md)
+  * [PHP SDK](official-sdks/php-sdk.md)
+* [Glossary](glossary.md)
+* [Changelog](changelog.md)
+
