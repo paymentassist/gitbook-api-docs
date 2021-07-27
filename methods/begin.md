@@ -11,14 +11,15 @@ Begin application
 
 {% api-method-description %}
 This endpoint commences the application process. A successful request will return a `token` \(a 36-char UUID\) along with a continuation URL. You should redirect the customer to this URL so they can complete the rest of the signup process and record the `token` for later use. If configured, we'll send them back to either your `success_url` or `failure_url`, depending on the outcome.  
-
+  
 Before we redirect the customer back to the client site, we will append the success/failure URL with the following GET parameters:  
-
+  
 | name | type | description |
 | :--- | :--- | :--- |
 | `token` | string | The application token (UUID). |
 | `status` | string | Either `success` or `failed`. |
 | `signature` | string | The [authentication signature](authentication.md) of the request, generated using your account credentials. |
+  
   
 {% endapi-method-description %}
 
