@@ -28,4 +28,6 @@ The API workflow outlined above can be augmented with a pre-approval process con
 | 6 \(_optional_\) | In order for the funds to be paid out, we also require the original customer invoice to be uploaded. This can be automated via the `/invoice` endpoint, or it can be completed manually via the dealer dashboard. |
 
 
+## Contributions
 
+If you see an error or feel we can improve our documentation in any way, please fork our [public github repo](https://github.com/paymentassist/gitbook-api-docs), create a new branch with your proposed changes and open a PR.
