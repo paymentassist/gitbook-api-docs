@@ -1,5 +1,12 @@
 # Changelog
 
+## 2021-07-28
+
+### Added
+
+* We added the `multi_plan` parameter to the [/begin](methods/begin.md) endpoint.
+* We added the `qr_code` parameter to the [/begin](methods/begin.md) endpoint.
+
 ## 2021-05-25
 
 ### Changed
@@ -16,7 +23,7 @@
 
 ### Changed
 
-* The[ /account](methods/account.md) and [/update](methods/update.md) endpoints have now graduated to GA on the live environment.
+* The [/account](methods/account.md) and [/update](methods/update.md) endpoints have now graduated to GA on the live environment.
 
 ## 2020-10-07
 

@@ -65,7 +65,7 @@ Your webhook URL \(see Webhooks\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="plan\_id" type="integer" required=false %}
-The plan ID \(See Plan Types\). \* **Required where account has access to multiple plan types** \*
+The plan ID \(See Plan Types\). Required where account has access to multiple plan types and `multi_plan` is false
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="reg\_no" type="string" required=false %}
@@ -101,12 +101,22 @@ Customer mobile telephone number
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="send\_email" type="boolean" required=false %}
-Send application link to customer via email
+Send application link to customer via email. Default `false`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="send\_sms" type="boolean" required=false %}
-Send application link to customer via SMS
+Send application link to customer via SMS. Default: `false`
 {% endapi-method-parameter %}
+
+{% api-method-parameter name="multi\_plan" type="boolean" required=false %}
+If `true` the customer will see a list of all qualifying payment plans and be able to select themselves. Default: `false`
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="qr\_code" type="boolean" required=false %}
+For offline-sessions where the customer is present (e.g. on POS or kiosk), if `true` we will return a base64-encoded QR code. Default: `false`
+{% endapi-method-parameter %}
+
+
 {% endapi-method-form-data-parameters %}
 {% endapi-method-request %}
 
