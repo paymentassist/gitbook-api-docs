@@ -8,5 +8,5 @@ Your test and live credentials can be identified by the prefix on the API secret
 - `prod_XXXXXXXXXXXXXXXXXXX` = production/live  
 - `demo_XXXXXXXXXXXXXXXXXXX` = demo/test
 
-To complete a full customer test you can use the Visa test card number \(4111 1111 1111 1111\) along with any valid expiry date and CVV.
+To complete a full customer test you can use the Visa test card number \(4111 1111 1111 1111\) along with any valid expiry date and CVV. Ensure the cardholder name matches the name on the application to avoid simulated rejections.
 
