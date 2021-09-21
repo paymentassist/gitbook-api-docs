@@ -45,7 +45,8 @@ Request successfully processed. Example response below:
                 "frequency": "monthly",
                 "min_amount": null,
                 "max_amount": 500000,
-                "commission_rate": "8.50"
+                "commission_rate": "8.50",
+                "commission_fixed_fee": null
             },{
                 "plan_id": 1,
                 "name": "4-Payment",
@@ -56,6 +57,7 @@ Request successfully processed. Example response below:
                 "min_amount": null,
                 "max_amount": 300000,
                 "commission_rate": "8.50"
+                "commission_fixed_fee": null
             }
         ]
     }
@@ -83,4 +85,8 @@ The `plans` property of the response contains an array of plan objects, each wit
 | `min_amount` | The minimum value allowed for the plan \(in pence\) or `null` for no minimum |
 | `max_amount` | The maximum value allowed for the plan \(in pence\) or `null` for no maximum |
 | `commission_rate` | The Payment Assist commission rate on the plan \(%\) |
+| `commission_fixed_fee` | The Payment Assist commission fixed fee on the plan \(in pence\) or `null` for no fixed fee |
 
+{% hint style="info" %}
+It's possible for plans to have both a `commission_rate` and a `commission_fixed_fee`. For example, £5.00 fixed fee + 2.5% on a £500 plan would mean a total commission fee of £17.50.
+{% endhint %}

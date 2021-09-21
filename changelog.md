@@ -1,5 +1,11 @@
 # Changelog
 
+## 2021-09-21
+
+### Added
+
+* We added support for fixed fee commissions, which are now reported on the [/account](methods/account.md) endpoint.
+
 ## 2021-07-28
 
 ### Added
