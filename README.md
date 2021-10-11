@@ -1,6 +1,6 @@
 # Overview
 
-The Payment Assist API allows for programmatic integration of our lending service into your own software. This is typically during the checkout phase of your service/product purchase flow.
+The Payment Assist API allows for programmatic integration of our lending service into your own software; typically during the checkout/payment phase of your service/product purchase flow.
 
 {% hint style="info" %}
 The Payment Assist API is now GA. To access your credentials: login to the dealer dashboard, click your username/email \(top right\) and click [API Credentials](https://secure.payment-assist.co.uk/settings?tab=api).
